@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.highscore {
+    text-align: left;
+}
+
+.timer {
+    text-align: right;
+}
+
+.wrapper {
+    padding-top: 30px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+.card-header {
+    text-align: center;
+    margin: auto;
+    max-width: 50%;
+  }
+
+  .card-footer {
+    text-align: center;
+  }
+ 
+  .btn {
+    border: none;
+    background-color: purple;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: white;
+    font-size: 21px;
+    line-height: 21px;
+    margin: 16px 16px 16px 20px;
+    text-align: center;
+  }
