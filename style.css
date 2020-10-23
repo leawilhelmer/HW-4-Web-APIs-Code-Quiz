@@ -8,11 +8,13 @@ body {
   font-family: sans-serif;
 }
 
-.highscore {
+#highscore {
     text-align: left;
+    font-size: small;
+    font-weight: lighter;
 }
 
-.timer {
+#timer {
     text-align: right;
 }
 
