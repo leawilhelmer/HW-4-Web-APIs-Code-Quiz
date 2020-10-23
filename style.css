@@ -16,6 +16,8 @@ body {
 
 #timer {
     text-align: right;
+    font-size: small;
+    font-weight: lighter;
 }
 
 .wrapper {
@@ -47,4 +49,15 @@ body {
     line-height: 21px;
     margin: 16px 16px 16px 20px;
     text-align: center;
+  }
+
+  li {
+      border: none;
+      background-color: purple;
+      border-radius: 5px;
+      color: white;
+      font-size: 15px;
+      line-height: 21px;
+      margin: 16px 16px 16px 20px;
+      text-align: center;
   }

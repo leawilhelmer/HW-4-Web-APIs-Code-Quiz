@@ -1,7 +1,10 @@
 var timerCount = 75
-var timerEl = document.querySelector("#timer")
-
-timerEl.textContent = timerCount
+function time() { 
+var timerEl = document.querySelector("#timercount")
+var startEl = document.querySelector("#start")
+/*timerCount--;*/
+console.log(timerCount)
+/*timerEl.textContent = timerCount*/
 
 var timer = window.setInterval(function () {
   timerCount--;
@@ -11,6 +14,10 @@ var timer = window.setInterval(function () {
     clearInterval(timer)
   }
 }, 1000)
+}
+start.addEventListener("click", function() {
+  time();
+})
 
 var questions = [
   {
@@ -19,8 +26,8 @@ var questions = [
     a: "B"
   },
   {
-    q: "What is a correct syntax to output "Hello World" in Java?",
-    choices: ["System.out.printIn("Hello World");", "print("Hello World");", "Console.WriteLine("Hello World");"],
+    q: "What is a correct syntax to output Hello World in Java?",
+    choices: ["System.out.printIn(Hello World);", "print(Hello World);", "Console.WriteLine(Hello World);"],
     a: "A"
   },
   {
@@ -63,6 +70,8 @@ function setQuestions() {
   optionB.textContent = questions[questionsPointer].choices[1]
   optionC.textContent = questions[questionsPointer].choices[2]
 }
+
+
 
 setQuestions()
 

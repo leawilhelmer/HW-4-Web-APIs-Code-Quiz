@@ -9,7 +9,7 @@
 <body>
 
     <h1 id="highscore">View Highscore</h1>
-    <h1 id="timer"></h1>
+    <h1 id="timer"><span id="timercount">0</span></h1>
 
     <div class="wrapper">
       <header>
@@ -25,13 +25,15 @@
       </div>
     </div>
 
-    <h1 id="question"></h1>
-    
-    <ul>
-      <li id="optionA" data-answer="A"></li>
-      <li id="optionB" data-answer="B"></li>
-      <li id="optionC" data-answer="C"></li>
-    </ul>
+    <h1 id="question" class="hide"></h1>
+
+<div id="answers" class="hide">
+    <ol>
+      <li id="optionA" class="btn" data-answer="A"></li>
+      <li id="optionB" class="btn" data-answer="B"></li>
+      <li id="optionC" class="btn" data-answer="C"></li>
+    </ol>
+</div>
 
     <script src="./app.js"></script>
 </body>
