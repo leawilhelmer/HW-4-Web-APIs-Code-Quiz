@@ -20,6 +20,14 @@ body {
     font-weight: lighter;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .wrapper {
     padding-top: 30px;
   }
