@@ -1,7 +1,11 @@
 var timerCount = 75
-function time() { 
 var timerEl = document.querySelector("#timercount")
 var startEl = document.querySelector("#start")
+var questionEl = document.querySelector("#question")
+var answerEl = document.querySelector("#answers")
+
+function time() { 
+
 /*timerCount--;*/
 console.log(timerCount)
 /*timerEl.textContent = timerCount*/
@@ -17,6 +21,7 @@ var timer = window.setInterval(function () {
 }
 start.addEventListener("click", function() {
   time();
+  setQuestions()
 })
 
 var questions = [
@@ -58,6 +63,8 @@ var optionC = document.querySelector("#optionC")
 
 
 function setQuestions() {
+questionEl.removeAttribute("class")
+answerEl.removeAttribute("class")
 
   if (questionsPointer === questions.length) {
     clearInterval(timer)
@@ -65,15 +72,18 @@ function setQuestions() {
     return
   }
 
+  answerEl.innerHTML = "";
+
   question.textContent = questions[questionsPointer].q
-  optionA.textContent = questions[questionsPointer].choices[0]
-  optionB.textContent = questions[questionsPointer].choices[1]
-  optionC.textContent = questions[questionsPointer].choices[2]
+  var currentquestion = questions[questionsPointer]
+  for (var i = 0; i < currentquestion.choices.length; i++) {
+   var answers = document.createElement("button").style.color = "purple";
+   answers.textContent = currentquestion.choices[i];
+   console.log(currentquestion.choices[i]);
+   answerEl.appendChild (answers);
+  }
+
 }
-
-
-
-setQuestions()
 
 optionA.addEventListener("click", function () {
   if (optionA.getAttribute("data-answer") === questions[questionsPointer].a) {
@@ -107,3 +117,4 @@ optionC.addEventListener("click", function () {
     timerCount -= 10
   }
 })
+
