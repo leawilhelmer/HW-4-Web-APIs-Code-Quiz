@@ -28,6 +28,12 @@ body {
   display: none;
 }
 
+#questions {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 600;
+}
+
 .wrapper {
     padding-top: 30px;
   }
